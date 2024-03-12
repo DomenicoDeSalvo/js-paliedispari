@@ -6,8 +6,8 @@ function isPalindrome(string){
     //Rendere il testo tutto minuscolo.
     const lowerCaseUserWord = userWord.toLowerCase();
     //Dichiarazione delle variabili che serviranno a confrontare le parole.
-    let letterIndex = ''
-    let letterReverseIndex = ''
+    let letterIndex = ''; //String
+    let letterReverseIndex = ''; //String
     
     for(let i = 0; i < lowerCaseUserWord.length; i++){
         letterIndex = lowerCaseUserWord[i]; //String
