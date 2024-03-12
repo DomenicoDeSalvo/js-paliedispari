@@ -4,9 +4,65 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pari e Dispari</title>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-      
+        <!-- HEADER -->
+        <header>
+            <div class="main__title container">
+                <h1>
+                    <span class="title__decoration"><i class="fa-solid fa-dice-six"></i></span>
+                    Pari o Dispari?
+                    <span class="title__decoration"><i class="fa-solid fa-dice-one"></i></span>
+                </h1>
+            </div>
+        </header>
+        <main>
+            <section class="container first_part">
+                <h3>Scegli tra pari o dispari</h3>
+                <div class="choice">
+                    <button class="even">PARI</button>
+                    <button class="odd">DISPARI</button>
+                </div>
+            </section>
+            <section class="container second_part hidden">
+                <h3>Scegli un numero da 1 a 5 e invia</h3>
+                <div class="number_choice">
+                    <select name="Il tuo numero" class="user_number" id="user_number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <div>
+                        <button class="submit">Invia</button>
+                    </div>
+                </div>
+            </section>
+            <section class="outcome">
+                <div class="container">
+                    <div class="result hidden" >
+                        <div class="user">
+                            <div>GIOCATORE</div>
+                            <div id="number_user"></div>
+                        </div>
+                        <div class="total">
+                            <div>TOTALE</div>
+                            <div id="number_sum"></div>
+                        </div>
+                        <div class="computer">
+                            <div>COMPUTER</div>
+                            <div id="number_computer"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="proclamation"></div>
+                </div>
+            </section>
+        </main>
+
         <script src="./js/app.js"></script>
         
     </body>

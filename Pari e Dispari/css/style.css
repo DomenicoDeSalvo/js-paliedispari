@@ -1,0 +1,75 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+body{
+    background-color: maroon;
+    overflow: hidden;
+}
+
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+/* HEADER */
+
+header{
+    color: white;
+}
+
+
+header h1{
+    margin: 24px 0;
+    font-size: 40px;
+}
+
+
+header::after{
+    content: '';
+    display: block;
+    border: 2px solid white;
+    width: 100%;
+}
+
+/* MAIN */
+
+main h3{
+    font-size: 26px;
+    color: white;
+    margin: 30px;
+}
+
+button{
+    margin: 50px;
+    padding: 10px 30px;
+    width: 200px;
+    font-size: 30px;
+}
+
+.user,
+.computer,
+.total{
+    width: 200px;
+    text-align: center;
+}
+
+.outcome .container div{
+    color: white;
+    margin: 24px 0;
+    font-size: 30px;;
+}
+
+.hidden{
+    display: none;
+}
+
+.shown{
+    display: flex;
+    justify-content: space-around;
+}
