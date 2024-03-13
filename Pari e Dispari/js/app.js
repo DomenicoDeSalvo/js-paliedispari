@@ -42,7 +42,7 @@ submitElement.addEventListener('click', function(){
     resultElement.classList.remove('hidden'); //Element || Null
     resultElement.classList.add('shown'); //Element || Null
     //Atribuire un numero al computer.
-    computerNumber = parseInt(Math.floor(Math.random() * 5 + 1)); //Number
+    computerNumber = randomNumber(); //Number
     console.log(userNumber, computerNumber);
     //Insermiento della funzione.
     let result = isSumEven(userNumber, computerNumber);//String
@@ -91,6 +91,13 @@ function sum (number1, number2){
     const sum = number1 + number2;
 
     return sum
+}
+
+//Funzione creazione numero random.
+
+function randomNumber(){
+    number = parseInt(Math.floor(Math.random() * 5 + 1));
+    return number
 }
 
 
