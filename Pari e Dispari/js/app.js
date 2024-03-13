@@ -26,7 +26,7 @@ userBet = 'even'; //String
 })
 
 //Acquisire il numero scelto dall'utente.
-const inputNumberChoiceElement = document.querySelector('.user_number');//Element | Null
+const inputNumberChoiceElement = document.querySelector('.user_number');//Element || Null
 //Dichiarare la variabile a cui assegnarlo.
 let userNumber = ''; //String
 //Dichiarare una variabile per il numero che sarà assegnato al computer.
@@ -46,16 +46,31 @@ submitElement.addEventListener('click', function(){
     computerNumber = parseInt(Math.floor(Math.random() * 5 + 1)); //Number
     console.log(userNumber, computerNumber);
     //Insermiento della funzione.
-    const result = isSumEven(userNumber, computerNumber);//String
+    let result = isSumEven(userNumber, computerNumber);//String
     console.log(result);
     //Mostrare i risultati attribuiti ai giocatori.
-    const userElement = document.querySelector('.number_user'); //Element | Null
-    const computerElement = document.querySelector('.number_computer'); //Element | Null
+    const userElement = document.querySelector('.number_user'); //Element || Null
+    const computerElement = document.querySelector('.number_computer'); //Element || Null
     userElement.innerHTML = userNumber; //number
     computerElement.innerHTML = computerNumber; //Number
     //Ed il totale.
-    const sumElement = document.querySelector('.number_sum'); //Element | Null
+    const sumElement = document.querySelector('.number_sum'); //Element || Null
     sumElement.innerHTML = sum(userNumber, computerNumber); //Number
+
+    // Dichiarare la vittoria o la sconfitta.
+    const proclamationElement = document.querySelector('.proclamation'); //Element || Null
+
+    if(result === true && userBet === 'even'){
+        proclamationElement.innerHTML = 'PARI - Hai vinto!';
+
+    } else if(result === true &&  userBet ==='odd') {
+        proclamationElement.innerHTML = 'PARI - Hai perso';
+    } else if(result === false &&  userBet === 'even') {
+        proclamationElement.innerHTML = 'DISPARI - Hai perso';
+    } else if(result === false &&  userBet === 'odd') {
+        proclamationElement.innerHTML = 'DISPARI - Hai vinto!';
+    }
+
     
 })
 
@@ -79,6 +94,8 @@ function sum (number1, number2){
 
     return sum
 }
+
+
 
 
 
