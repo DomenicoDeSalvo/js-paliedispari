@@ -1,4 +1,3 @@
-
 //Acquisire la scelta tra pari o dispari.
 //Acquisire i bottoni.
 const oddButtonElement = document.querySelector('.odd');
@@ -70,8 +69,7 @@ submitElement.addEventListener('click', function(){
     } else if(result === false &&  userBet === 'odd') {
         proclamationElement.innerHTML = 'DISPARI - Hai vinto!';
     }
-
-    
+   
 })
 
 
