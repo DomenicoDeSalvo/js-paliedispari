@@ -52,6 +52,11 @@ button{
     font-size: 30px;
 }
 
+.user_number{
+    width: 40px;
+    text-align: center;
+}
+
 .user,
 .computer,
 .total{
