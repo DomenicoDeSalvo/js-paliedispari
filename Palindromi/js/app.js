@@ -23,11 +23,16 @@ function isPalindrome(string){
     
     if(letterIndex === letterReverseIndex ){
         console.log(userWord + ' è una parola palindroma');
+        return true
         
     } else {
         console.log(userWord + ' non è una parola palindroma');
+        return false
     }
 }
 
 isPalindrome(userWord);
+
+const result = isPalindrome(userWord);
+console.log(result)
 
