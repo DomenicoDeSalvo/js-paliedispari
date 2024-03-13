@@ -22,17 +22,20 @@ function isPalindrome(string){
     //Confronto delle due parole.
     
     if(letterIndex === letterReverseIndex ){
-        console.log(userWord + ' è una parola palindroma');
         return true
         
     } else {
-        console.log(userWord + ' non è una parola palindroma');
         return false
     }
 }
 
 isPalindrome(userWord);
 
-const result = isPalindrome(userWord);
-console.log(result)
+let result = isPalindrome(userWord);
+
+if(result === true){
+    console.log(userWord + ' è una parola palindroma');
+} else {
+    console.log(userWord + ' non è una parola palindroma');
+}
 
