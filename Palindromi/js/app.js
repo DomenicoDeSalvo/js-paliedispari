@@ -2,26 +2,23 @@
 const userWord = prompt('Inserisci una parola e scopri se è palindroma'); //String
 
 //Scrittura funzione.
-function isPalindrome(string){
-    //Rendere il testo tutto minuscolo.
-    const lowerCaseUserWord = userWord.toLowerCase();
-    //Dichiarazione delle variabili che serviranno a confrontare le parole.
-    let letterIndex = ''; //String
-    let letterReverseIndex = ''; //String
+function isPalindrome(text){
+    //Rendere il testo tutto minuscolo e separarne le lettere.
+    const toLowerCaseUserWord = userWord.toLowerCase();
+    const userWordLetters = toLowerCaseUserWord.split('');
+    //Dichiarazione delle variabile che rappresenterà la parola al contrario.
+    let reverseUserWord = ''; //String
     
-    for(let i = 0; i < lowerCaseUserWord.length; i++){
-        letterIndex = lowerCaseUserWord[i]; //String
+    for(let i = 0; i < userWordLetters.length; i++){
+        //Prendere ad una ad una le lettere della parola partendo dalla fine.
+        const reverseLetters = userWordLetters.at(-1 - i);
+        reverseUserWord += reverseLetters
    
-    }
-
-    for(let reverseI = lowerCaseUserWord.length - 1; reverseI >= 0; reverseI--){
-        letterReverseIndex = lowerCaseUserWord[reverseI];//String
-
     }
 
     //Confronto delle due parole.
     
-    if(letterIndex === letterReverseIndex ){
+    if(toLowerCaseUserWord === reverseUserWord ){
         return true
         
     } else {
